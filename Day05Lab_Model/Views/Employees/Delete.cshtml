@@ -1,0 +1,30 @@
+﻿@model Day05Lab_Model.Models.Employee
+
+@{
+    ViewData["Title"] = "Xóa nhân viên";
+}
+
+<div class="card shadow p-4">
+    <h3 class="mb-3 text-danger">Bạn có chắc chắn muốn xóa?</h3>
+
+    <dl class="row">
+        <dt class="col-sm-3">Họ và tên</dt>
+        <dd class="col-sm-9">@Model.FullName</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+
+        <dt class="col-sm-3">Lương</dt>
+        <dd class="col-sm-9">@string.Format("{0:N0} VNĐ", Model.Salary)</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">
+            <i class="bi bi-trash"></i> Xóa
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Hủy
+        </a>
+    </form>
+</div>

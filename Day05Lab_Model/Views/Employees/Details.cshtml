@@ -1,0 +1,38 @@
+﻿@model Day05Lab_Model.Models.Employee
+
+@{
+    ViewData["Title"] = "Chi tiết nhân viên";
+}
+
+<div class="card shadow p-4">
+    <h3 class="mb-3">Chi tiết nhân viên</h3>
+
+    <dl class="row">
+        <dt class="col-sm-3">Họ và tên</dt>
+        <dd class="col-sm-9">@Model.FullName</dd>
+
+        <dt class="col-sm-3">Giới tính</dt>
+        <dd class="col-sm-9">@Model.Gender</dd>
+
+        <dt class="col-sm-3">Số điện thoại</dt>
+        <dd class="col-sm-9">@Model.Phone</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+
+        <dt class="col-sm-3">Lương</dt>
+        <dd class="col-sm-9">@string.Format("{0:N0} VNĐ", Model.Salary)</dd>
+
+        <dt class="col-sm-3">Trạng thái</dt>
+        <dd class="col-sm-9">
+            @(Model.Status ? "Đang làm" : "Nghỉ việc")
+        </dd>
+    </dl>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+        <i class="bi bi-pencil"></i> Sửa
+    </a>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Quay lại
+    </a>
+</div>

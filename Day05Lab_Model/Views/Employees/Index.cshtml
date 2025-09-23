@@ -1,0 +1,84 @@
+﻿@model X.PagedList.IPagedList<Day05Lab_Model.Models.Employee>
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+}
+
+<h2 class="mb-4">Danh sách nhân viên</h2>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" class="d-flex">
+            <input type="text" name="searchString" class="form-control me-2"
+                   placeholder="Tìm theo họ tên..." value="@Context.Request.Query["searchString"]" />
+            <button type="submit" class="btn btn-outline-primary">
+                <i class="bi bi-search"></i> Tìm
+            </button>
+        </form>
+    </div>
+    <div class="col-md-6 text-end">
+        <a class="btn btn-success" asp-action="Create">
+            <i class="bi bi-person-plus"></i> Thêm nhân viên
+        </a>
+    </div>
+</div>
+
+<table class="table table-hover table-striped align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Họ và tên</th>
+            <th>Giới tính</th>
+            <th>Số điện thoại</th>
+            <th>Email</th>
+            <th class="text-end">Lương (VNĐ)</th>
+            <th>Trạng thái</th>
+            <th class="text-center">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.Gender</td>
+                <td>@item.Phone</td>
+                <td>@item.Email</td>
+                <td class="text-end">@string.Format("{0:N0}", item.Salary)</td>
+                <td>
+                    @if (item.Status)
+                    {
+                        <span class="badge bg-success">Đang làm</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Nghỉ việc</span>
+                    }
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil-square"></i> Sửa
+                    </a>
+                    <a class="btn btn-sm btn-info text-white" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="bi bi-eye"></i> Xem
+                    </a>
+                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Bạn có chắc muốn xóa nhân viên này?');">
+                            <i class="bi bi-trash"></i> Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = Context.Request.Query["searchString"] }),
+    new PagedListRenderOptions
+    {
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" }
+    })
+</div>
