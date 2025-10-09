@@ -1,0 +1,26 @@
+# Visual Studio / IDE files
+.vs/
+*.suo
+*.user
+*.aps
+*.pdb
+*.obj
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+
+# Source control
+/.git/
+
+# Additional C# / .NET files
+*.dll
+*.exe
+# Nếu là dự án .NET/C# thì thường thêm các thư mục này:
+**/bin/
+**/obj/
