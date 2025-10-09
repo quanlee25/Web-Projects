@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Day05Lab_Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e87503c27b4b78354944d2bf0cd69c794eb7ace6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Day05Lab_Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Day05Lab_Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
