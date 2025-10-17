@@ -1,0 +1,61 @@
+﻿@model LVQ_Day09Lab.Models.Lvq_SanPham
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Lvq_SanPham</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Lvq_ID" />
+            <div class="form-group">
+                <label asp-for="Lvq_MaSanPham" class="control-label"></label>
+                <input asp-for="Lvq_MaSanPham" class="form-control" />
+                <span asp-validation-for="Lvq_MaSanPham" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_TenSanPham" class="control-label"></label>
+                <input asp-for="Lvq_TenSanPham" class="form-control" />
+                <span asp-validation-for="Lvq_TenSanPham" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_HinhAnh" class="control-label"></label>
+                <input asp-for="Lvq_HinhAnh" class="form-control" />
+                <span asp-validation-for="Lvq_HinhAnh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_SoLuong" class="control-label"></label>
+                <input asp-for="Lvq_SoLuong" class="form-control" />
+                <span asp-validation-for="Lvq_SoLuong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_DonGia" class="control-label"></label>
+                <input asp-for="Lvq_DonGia" class="form-control" />
+                <span asp-validation-for="Lvq_DonGia" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lvq_TrangThai" /> @Html.DisplayNameFor(model => model.Lvq_TrangThai)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_LoaiSanPhamID" class="control-label"></label>
+                <select asp-for="Lvq_LoaiSanPhamID" class="form-control" asp-items="ViewBag.Lvq_LoaiSanPhamID"></select>
+                <span asp-validation-for="Lvq_LoaiSanPhamID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,41 @@
+﻿@model LVQ_Day09Lab.Models.Lvq_LoaiSanPham
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Lvq_LoaiSanPham</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Lvq_ID" />
+            <div class="form-group">
+                <label asp-for="Lvq_MaLoai" class="control-label"></label>
+                <input asp-for="Lvq_MaLoai" class="form-control" />
+                <span asp-validation-for="Lvq_MaLoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_TenLoai" class="control-label"></label>
+                <input asp-for="Lvq_TenLoai" class="form-control" />
+                <span asp-validation-for="Lvq_TenLoai" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lvq_TrangThai" /> @Html.DisplayNameFor(model => model.Lvq_TrangThai)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

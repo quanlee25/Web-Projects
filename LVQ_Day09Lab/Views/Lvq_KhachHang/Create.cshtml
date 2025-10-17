@@ -1,0 +1,65 @@
+﻿@model LVQ_Day09Lab.Models.Lvq_KhachHang
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Lvq_KhachHang</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Lvq_MaKhachHang" class="control-label"></label>
+                <input asp-for="Lvq_MaKhachHang" class="form-control" />
+                <span asp-validation-for="Lvq_MaKhachHang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_HoTenKhachHang" class="control-label"></label>
+                <input asp-for="Lvq_HoTenKhachHang" class="form-control" />
+                <span asp-validation-for="Lvq_HoTenKhachHang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_Email" class="control-label"></label>
+                <input asp-for="Lvq_Email" class="form-control" />
+                <span asp-validation-for="Lvq_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_MatKhau" class="control-label"></label>
+                <input asp-for="Lvq_MatKhau" class="form-control" />
+                <span asp-validation-for="Lvq_MatKhau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_DienThoai" class="control-label"></label>
+                <input asp-for="Lvq_DienThoai" class="form-control" />
+                <span asp-validation-for="Lvq_DienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_DiaChi" class="control-label"></label>
+                <input asp-for="Lvq_DiaChi" class="form-control" />
+                <span asp-validation-for="Lvq_DiaChi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_NgayDangKy" class="control-label"></label>
+                <input asp-for="Lvq_NgayDangKy" class="form-control" />
+                <span asp-validation-for="Lvq_NgayDangKy" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lvq_TrangThai" /> @Html.DisplayNameFor(model => model.Lvq_TrangThai)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<LVQ_Day09Lab.Models.Lvq_SanPham>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_MaSanPham)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_TenSanPham)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_HinhAnh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_DonGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvq_LoaiSanPham)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_MaSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_TenSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_HinhAnh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_DonGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvq_LoaiSanPham.Lvq_ID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Lvq_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Lvq_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Lvq_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

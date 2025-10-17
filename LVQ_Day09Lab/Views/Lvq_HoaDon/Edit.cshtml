@@ -1,0 +1,76 @@
+﻿@model LVQ_Day09Lab.Models.Lvq_HoaDon
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Lvq_HoaDon</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Lvq_ID" />
+            <div class="form-group">
+                <label asp-for="Lvq_MaHoaDon" class="control-label"></label>
+                <input asp-for="Lvq_MaHoaDon" class="form-control" />
+                <span asp-validation-for="Lvq_MaHoaDon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_KhachHangID" class="control-label"></label>
+                <select asp-for="Lvq_KhachHangID" class="form-control" asp-items="ViewBag.Lvq_KhachHangID"></select>
+                <span asp-validation-for="Lvq_KhachHangID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_NgayHoaDon" class="control-label"></label>
+                <input asp-for="Lvq_NgayHoaDon" class="form-control" />
+                <span asp-validation-for="Lvq_NgayHoaDon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_NgayNhan" class="control-label"></label>
+                <input asp-for="Lvq_NgayNhan" class="form-control" />
+                <span asp-validation-for="Lvq_NgayNhan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_HoTenKhachHang" class="control-label"></label>
+                <input asp-for="Lvq_HoTenKhachHang" class="form-control" />
+                <span asp-validation-for="Lvq_HoTenKhachHang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_Email" class="control-label"></label>
+                <input asp-for="Lvq_Email" class="form-control" />
+                <span asp-validation-for="Lvq_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_DienThoai" class="control-label"></label>
+                <input asp-for="Lvq_DienThoai" class="form-control" />
+                <span asp-validation-for="Lvq_DienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_DiaChi" class="control-label"></label>
+                <input asp-for="Lvq_DiaChi" class="form-control" />
+                <span asp-validation-for="Lvq_DiaChi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lvq_TongTriGia" class="control-label"></label>
+                <input asp-for="Lvq_TongTriGia" class="form-control" />
+                <span asp-validation-for="Lvq_TongTriGia" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Lvq_TrangThai" /> @Html.DisplayNameFor(model => model.Lvq_TrangThai)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
