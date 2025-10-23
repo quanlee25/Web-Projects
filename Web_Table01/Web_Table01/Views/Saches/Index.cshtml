@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Web_Table01.Models.Sach>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenSach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TacGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaTheLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNXB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonGiaNhap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonGiaBan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoTrang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrongLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anh)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TacGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaTheLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNXB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonGiaNhap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonGiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoTrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrongLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anh)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaSach">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaSach">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaSach">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
