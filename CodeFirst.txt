@@ -2,3 +2,5 @@
   "DEMO_CodeFirst": "Server=QUAN\\SQLEXPRESS;Database=DEMO_CodeFirst;uid=sa;pwd=020505;TrustServerCertificate=True;Encrypt=False;MultipleActiveResultSets=True;"
 
 }
+"ConnectionStrings": {
+  "DefaultConnection": "Server=QUAN\\SQLEXPRESS;Database=QLSach;Trusted_Connection=True;TrustServerCertificate=True;"
