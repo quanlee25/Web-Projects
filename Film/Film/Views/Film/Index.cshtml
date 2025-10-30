@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Film>
+@{
+    ViewBag.Title = "Phim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container status-container">
+    <ul class="row status-nav">
+        <li class="col status-item">
+            <a class="nav-link active" href="#" id="now-showing">Phim Đang Chiếu</a>
+        </li>
+        <li class="col status-item">
+            <a class="nav-link" href="#" id="upcoming-movies">Phim Sắp Chiếu</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div id="content">
+        <div id="now-showing-content" class="movie-list row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+            @foreach (var film in Model)
+            {
+                <div class="col mb-4">
+                    <div class="card card-movie">
+                        <div class="position-relative">
+                            <div class="movie-age" data-age="@film.Age">@film.Age</div>
+                        </div>
+                        <a href="@Url.Action("Detail", "Film", new { id = film.Id })" class="card card-movie">
+                            <img src="@film.Poster" alt="@film.Title" class="card-img-top movie-list-item-img" />
+                            <div class="card-body">
+                                <h5 class="card-title">@film.Title</h5>
+                                <span class="movie_genre">@film.Genre</span>
+                                <div class="row row-cols-2 align-items-center">
+                                    <div class="col movie_star">
+                                        <span class="movie_info"><i class="fas fa-star text-warning"></i> @film.Rated</span>
+                                    </div>
+                                    <div class="col">
+                                        <a href="@film.Booking" class="btn btn-danger float-end btn-buy">Mua vé</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div id="upcoming-content" class="movie-list row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 d-none"></div>
+    </div>
+</div>

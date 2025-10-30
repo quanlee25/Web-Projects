@@ -1,4 +1,4 @@
-namespace LVQ_231230881_de01.Models
+namespace lvq_231230881_de01.Models
 {
     public class ErrorViewModel
     {
