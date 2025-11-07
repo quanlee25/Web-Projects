@@ -1,0 +1,53 @@
+﻿@model Film_detail.Models.FILM_detail
+@{
+    ViewData["Title"] = "Chi Tiết Phim";
+}
+
+<link rel="stylesheet" href="~/css/film-detail.css" />
+
+<div class="feature">
+    <div class="feature__bg">
+        <div class="feature__bg--video video-onl">
+            <iframe src="@Model.Video" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+    <div class="feature-content">
+        <span class="movie-age" data-age="@Model.Age">@Model.Age</span>
+        <h1 class="movie-title">@Model.Title</h1>
+
+        <p class="movie-meta">
+            <span class="movie-meta-item">@Model.Released</span> |
+            <span class="movie-meta-item">@Model.Runtime</span> |
+            <span class="movie-meta-item">@Model.Country</span> |
+            <span class="movie-meta-item">@Model.Genre</span>
+        </p>
+
+        <p class="movie-desc">@Model.Description</p>
+
+        @if (!string.IsNullOrEmpty(Model.Booking))
+        {
+            <a href="@Model.Booking" class="btn btn-danger buy-btn">Mua vé</a>
+        }
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-11 col-sm-5 col-lg-4">
+        <div class="info-wrap">
+            <h5 class="movie-content">Nội dung</h5>
+            <p class="movie-plot-short">@Model.Plot</p>
+        </div>
+    </div>
+
+    <div class="col-11 col-sm-6 ">
+        <div class="info-wrap">
+            <h5 class="movie-content">Thông tin</h5>
+            <p><strong>Đạo diễn:</strong> @Model.Director</p>
+            <p><strong>Diễn viên:</strong> @Model.Actors</p>
+            <p><strong>Ngôn ngữ:</strong> @Model.Language</p>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/film-detail.js"></script>

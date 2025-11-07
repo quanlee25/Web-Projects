@@ -1,0 +1,34 @@
+﻿[
+  {
+    "Id": "1",
+    "Title": "Avengers: Endgame",
+    "Description": "Trận chiến cuối cùng của biệt đội siêu anh hùng nhằm chống lại Thanos.",
+    "Plot": "Sau khi Thanos xóa sổ một nửa sinh mạng trong vũ trụ, các Avengers còn lại phải tìm cách đảo ngược thảm họa.",
+    "Director": "Anthony Russo, Joe Russo",
+    "Actors": "Robert Downey Jr., Chris Evans, Scarlett Johansson",
+    "Language": "English",
+    "Genre": "Hành động, Khoa học viễn tưởng",
+    "Released": "2019-04-26",
+    "Runtime": "181 phút",
+    "Country": "USA",
+    "Age": "13+",
+    "Video": "https://www.youtube.com/embed/TcMBFSGVi1c",
+    "Booking": "https://www.cgv.vn/default/movie/avengers-endgame"
+  },
+  {
+    "Id": "2",
+    "Title": "Inception",
+    "Description": "Một tên trộm chuyên đánh cắp bí mật bằng cách xâm nhập vào tiềm thức của nạn nhân.",
+    "Plot": "Dom Cobb được giao nhiệm vụ cuối cùng — cấy một ý tưởng vào tiềm thức của người khác thay vì đánh cắp nó.",
+    "Director": "Christopher Nolan",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+    "Language": "English",
+    "Genre": "Khoa học viễn tưởng, Tâm lý",
+    "Released": "2010-07-16",
+    "Runtime": "148 phút",
+    "Country": "USA",
+    "Age": "16+",
+    "Video": "https://www.youtube.com/embed/YoHD9XEInc0",
+    "Booking": "https://www.cgv.vn/default/movie/inception"
+  }
+]
