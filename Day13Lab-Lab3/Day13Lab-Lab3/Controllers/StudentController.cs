@@ -19,10 +19,10 @@ namespace Day13Lab_Lab3.Controllers
             {
                 listStudents = new List<Student>()
                 {
-                    new Student() { Id = 101, Name = "Lê Văn Quân", Branch = Branch.IT, Gender = Gender.Male, IsRegular = true, Address = "Nghệ An", Email = "q@gmail.com", DateOfBorth = new DateTime(2005, 5, 02), ImagePath="" },
-                    new Student() { Id = 102, Name = "Nguyễn Thị L", Branch = Branch.BE, Gender = Gender.Female, IsRegular = true, Address = "Hà Nội", Email = "lan@gmail.com", DateOfBorth= new DateTime(2004, 5, 21), ImagePath="" },
-                    new Student() { Id = 103, Name = "Trần Văn N", Branch = Branch.CE, Gender = Gender.Male, IsRegular = false, Address = "Hà Nội", Email = "nam@gmail.com", DateOfBorth = new DateTime(2005, 3, 15), ImagePath="" },
-                    new Student() { Id = 104, Name = "Lê Thị H", Branch = Branch.EE, Gender = Gender.Female, IsRegular = true, Address = "Hà Nội", Email = "huong@gmail.com", DateOfBorth = new DateTime(2004, 11, 30), ImagePath="" }
+                    new Student() { Id = 101, Name = "Hoàng Quân", Branch = Branch.IT, Gender = Gender.Male, IsRegular = true, Address = "Hà Nội", Email = "siluq.quan.1609@gmail.com", DateOfBorth = new DateTime(2005, 8, 13), ImagePath="/images/bo3baothu.jpeg" },
+                    new Student() { Id = 102, Name = "Nguyễn Thị Lan", Branch = Branch.BE, Gender = Gender.Female, IsRegular = true, Address = "Hà Nội", Email = "lan@gmail.com", DateOfBorth= new DateTime(2004, 5, 21), ImagePath="/images/bo3baothu.jpeg" },
+                    new Student() { Id = 103, Name = "Trần Văn Nam", Branch = Branch.CE, Gender = Gender.Male, IsRegular = false, Address = "Hà Nội", Email = "nam@gmail.com", DateOfBorth = new DateTime(2005, 3, 15), ImagePath="/images/bo3baothu.jpeg" },
+                    new Student() { Id = 104, Name = "Lê Thị Hương", Branch = Branch.EE, Gender = Gender.Female, IsRegular = true, Address = "Hà Nội", Email = "huong@gmail.com", DateOfBorth = new DateTime(2004, 11, 30), ImagePath="/images/bo3baothu.jpeg" }
                 };
             }
         }
